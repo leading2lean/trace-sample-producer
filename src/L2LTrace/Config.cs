@@ -4,7 +4,7 @@
 // Authors:
 //   Corey Olsen <corey@leading2lean.com>
 // 
-// Copyright 2016 Leading2Lean, Inc. (www.leading2lean.com)
+// Copyright 2016 Leading2Lean, LLC. (www.leading2lean.com)
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 // 
 
