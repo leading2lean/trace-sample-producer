@@ -1,0 +1,130 @@
+﻿token: 'bba0c178-0210-4c6b-b23a-6d46431d67ca'
+apiurl: 'https://bluesun.trcld.com/'
+reservequantity: 1000
+product_pause_time: 60
+subcomponent_pause_time: 5
+
+products:
+    - code: DT
+      name: Duct Tape
+      part_no: DTPSP201601
+      serial_no: DDDDD7
+      facility: PSP
+      items_in_container: 1
+      containers_on_pallett: 1
+      is_lot: True
+      is_root: False
+      # registered: True
+      # gtid: https://bluesun.trcld.com/36
+      recipe: []
+
+    - code: AA
+      name: Aft Alternator
+      part_no: AAPSP201601
+      # Add 0x13 to the number to start a new run
+      serial_no: A00060
+      facility: PSP
+      items_in_container: 12
+      containers_on_pallett: 20
+      is_root: False
+      recipe:
+          - code: DT
+            quantity: 1
+
+    - code: CC
+      name: Compression Coil
+      part_no: CCPSP201603
+      # Add 0x26 to the number to start a new run
+      serial_no: C100BE
+      facility: PSP
+      items_in_container: 1
+      containers_on_pallett: 2
+      is_root: False
+      recipe:
+          - code: CA
+            quantity: 12
+
+    - code: GL
+      name: G-Line
+      part_no: GLPSP201601
+      # Add 0xBE to the number to start a new run
+      serial_no: 3603B6
+      facility: PSP
+      items_in_container: 120
+      containers_on_pallett: 80
+      is_root: False
+      recipe: []
+
+    - code: GB
+      name: Grav Boot
+      part_no: GBPSP201503
+      # Add 0x26 to the number to start a new run
+      serial_no: 2300BE
+      facility: PSP
+      items_in_container: 5
+      containers_on_pallett: 20
+      is_root: False
+      recipe: []
+
+    - code: GD
+      name: Grav Dampener
+      part_no: GDPSP201601
+      # Add 0x13 to the number to start a new run
+      serial_no: 12005F
+      facility: PSP
+      items_in_container: 12
+      containers_on_pallett: 20
+      is_root: False
+      recipe: []
+
+    - code: FC
+      name: Fuel Cell
+      part_no: FCPSP201304
+      # Add 0xBE to the number to start a new run
+      serial_no: 6503B6
+      facility: PSP
+      items_in_container: 2
+      containers_on_pallett: 10
+      is_root: False
+      recipe: []
+
+    - code: CA
+      name: Catalyzer
+      part_no: CAPSP201601
+      # Add 0x1C8 to the number to start a new run
+      serial_no: F508E8
+      facility: PSP
+      items_in_container: 12
+      containers_on_pallett: 20
+      is_root: False
+      recipe:
+          - code: DT
+            quantity: 1
+
+    - code: TCB
+      name: Trace Compression Block
+      part_no: TBPSP201601
+      # Add 0x13 to the number to start a new run
+      serial_no: CCB060
+      items_in_container: 1
+      containers_on_pallett: 1
+      quota: 19
+      is_root: True
+      recipe:
+          - code: CC
+            quantity: 2
+
+          - code: AA
+            quantity: 1
+
+          - code: GL
+            quantity: 10
+
+          - code: GB
+            quantity: 2
+
+          - code: GD
+            quantity: 1
+
+          - code: FC
+            quantity: 10
