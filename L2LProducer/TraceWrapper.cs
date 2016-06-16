@@ -87,6 +87,8 @@ namespace L2LProducer
                 product.Registered = true;
                 product.TraceRecord = record as IRecord;
             }
+            product.get_next_serial_no();
+
             return record as IRecord;
         }
 

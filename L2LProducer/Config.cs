@@ -35,6 +35,7 @@ namespace L2LProducer
 
         [YamlMember(Alias = "is_lot")]
         public Boolean IsLot { get; set; }
+        [YamlMember(Alias = "registered")]
         public Boolean Registered { get; set; }
         [YamlMember(Alias = "is_root")]
         public Boolean Root { get; set; }
@@ -83,7 +84,6 @@ namespace L2LProducer
             var retval = String.Format("{0:X}", RealSerial);
             _serial_no = retval;
             RealSerial++;
-            Registered = true;
             return retval;
         }
     }

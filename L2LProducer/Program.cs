@@ -18,7 +18,7 @@ namespace L2LProducer
             var conf = load_config_file("./config.yaml");
             var producer = new Producer(conf);
             producer.run();
-            var new_conf = producer.create_config_file();
+            // var new_conf = producer.create_config_file();
             inc_serial_nos(conf);
             save_config_file(conf, "./new_config.yaml");
             Console.Read();

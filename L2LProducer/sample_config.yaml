@@ -1,5 +1,5 @@
-﻿token: 'bba0c178-0210-4c6b-b23a-6d46431d67ca'
-apiurl: 'https://bluesun.trcld.com/'
+﻿token: '<your api token here'
+apiurl: 'https://<your api server here>.trcld.com/'
 reservequantity: 1000
 product_pause_time: 60
 subcomponent_pause_time: 5
@@ -8,13 +8,13 @@ products:
     - code: DT
       name: Duct Tape
       part_no: DTPSP201601
-      serial_no: DDDDD7
+      serial_no: DDDDDB
       facility: PSP
       items_in_container: 1
       containers_on_pallett: 1
       is_lot: True
       is_root: False
-      # registered: True
+      registered: False
       # gtid: https://bluesun.trcld.com/36
       recipe: []
 
@@ -22,7 +22,7 @@ products:
       name: Aft Alternator
       part_no: AAPSP201601
       # Add 0x13 to the number to start a new run
-      serial_no: A00060
+      serial_no: A00086
       facility: PSP
       items_in_container: 12
       containers_on_pallett: 20
@@ -35,7 +35,7 @@ products:
       name: Compression Coil
       part_no: CCPSP201603
       # Add 0x26 to the number to start a new run
-      serial_no: C100BE
+      serial_no: C1010A
       facility: PSP
       items_in_container: 1
       containers_on_pallett: 2
@@ -48,7 +48,7 @@ products:
       name: G-Line
       part_no: GLPSP201601
       # Add 0xBE to the number to start a new run
-      serial_no: 3603B6
+      serial_no: 360532
       facility: PSP
       items_in_container: 120
       containers_on_pallett: 80
@@ -59,7 +59,7 @@ products:
       name: Grav Boot
       part_no: GBPSP201503
       # Add 0x26 to the number to start a new run
-      serial_no: 2300BE
+      serial_no: 23010A
       facility: PSP
       items_in_container: 5
       containers_on_pallett: 20
@@ -70,7 +70,7 @@ products:
       name: Grav Dampener
       part_no: GDPSP201601
       # Add 0x13 to the number to start a new run
-      serial_no: 12005F
+      serial_no: 120085
       facility: PSP
       items_in_container: 12
       containers_on_pallett: 20
@@ -81,7 +81,7 @@ products:
       name: Fuel Cell
       part_no: FCPSP201304
       # Add 0xBE to the number to start a new run
-      serial_no: 6503B6
+      serial_no: 650532
       facility: PSP
       items_in_container: 2
       containers_on_pallett: 10
@@ -92,7 +92,7 @@ products:
       name: Catalyzer
       part_no: CAPSP201601
       # Add 0x1C8 to the number to start a new run
-      serial_no: F508E8
+      serial_no: F50C7A
       facility: PSP
       items_in_container: 12
       containers_on_pallett: 20
@@ -105,7 +105,7 @@ products:
       name: Trace Compression Block
       part_no: TBPSP201601
       # Add 0x13 to the number to start a new run
-      serial_no: CCB060
+      serial_no: CCB086
       items_in_container: 1
       containers_on_pallett: 1
       quota: 19
