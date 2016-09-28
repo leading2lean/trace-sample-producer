@@ -36,7 +36,7 @@ namespace L2LProducer
             }
             catch (YamlException except)
             {
-                Console.WriteLine("Yaml Configuration exception: {0}", except.InnerException.Message);
+                Console.WriteLine("Yaml Configuration exception: {0}", except.InnerException != null ? except.InnerException.Message : except.Message);
                 Console.WriteLine("Terminating due to exception");
                 System.Environment.Exit(1);
             }

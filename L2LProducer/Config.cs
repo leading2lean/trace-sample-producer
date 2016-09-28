@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
+using Newtonsoft.Json;
+
 using L2L.Trace;
 
 namespace L2LProducer
@@ -86,6 +88,40 @@ namespace L2LProducer
             RealSerial++;
             return retval;
         }
+
+        [YamlMember(Alias = "private_data")]
+        public CustomData PrivateData { get; set; }
+    }
+
+    class CustomData : IRecord
+    {
+        [JsonProperty("_external")]
+        [YamlMember(Alias = "external")]
+        public ExternalLink External { get; set; }
+
+        [JsonProperty("data")]
+        [YamlMember(Alias = "data")]
+        public KeyValues Data { get; set; }
+
+    }
+
+    class ExternalLink
+    {
+        [JsonProperty("link")]
+        public String Link { get; set; }
+        [JsonProperty("title")]
+        public String Title { get; set; }
+    }
+
+    class KeyValues
+    {
+        [JsonProperty("key")]
+        public String Key { get; set; }
+        [JsonProperty("value")]
+        public String Value { get; set; }
+        [JsonProperty("_external")]
+        [YamlMember(Alias = "external")]
+        public ExternalLink External { get; set; }
     }
 
     class Recipe

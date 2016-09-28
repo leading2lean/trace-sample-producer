@@ -24,6 +24,9 @@ namespace L2LProducer
                 refill_reserve_ids(conf);
             }
 
+            // If the product has not been registered and it's a lot we are going to create it as if
+            // it were a serialized item. Afterwards, however, we will simply reuse it instead of creating
+            // it again
             if (!product.IsLot || (product.IsLot && !product.Registered)) {
                 return record_from_serialized_product(product, subs, conf);
             } else
@@ -47,6 +50,7 @@ namespace L2LProducer
             record.ExternalIds.Add(exid);
             record.GTID = product.GTID;
             product.TraceRecord = record;
+            record.Private = product.PrivateData;
             return record as IRecord;
         }
 
@@ -69,6 +73,7 @@ namespace L2LProducer
             var attribute = string.Format("P{0}@{1}", product.PartNo, DateTime.Now.ToString("yyyy-MM-dd"));
             record.Attributes.Add(attribute);
 
+            record.Private = product.PrivateData;
             record.Status = "Good";
 
             var gtid = ReserveIDs.Dequeue();
@@ -85,6 +90,7 @@ namespace L2LProducer
             if (product.IsLot)
             {
                 product.Registered = true;
+                product.GTID = gtid;
                 product.TraceRecord = record as IRecord;
             }
             product.get_next_serial_no();
